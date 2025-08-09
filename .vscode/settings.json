@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "ostream": "cpp"
+    },
+    "cmake.cmakePath": "D:\\Qt\\Tools\\CMake_64\\bin\\cmake.exe",
+    "cmake.generator": "MinGW Makefiles"
+}
