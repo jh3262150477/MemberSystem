@@ -1,37 +1,12 @@
-#include <iostream>
-using namespace std;
+﻿#include "include/System.h"
 
-// 冒泡排序函数
-void bubbleSort(int arr[], int n) {
-    for (int i = 0; i < n - 1; ++i) {
-        for (int j = 0; j < n - i - 1; ++j) {
-            if (arr[j] > arr[j + 1]) {
-                // 交换
-                int temp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = temp;
-            }
-        }
-    }
-}
-
+/**
+ * @brief 程序主函数
+ * @details 创建系统对象并启动会员管理系统
+ * @return 程序退出码，0表示正常退出
+ */
 int main() {
-    int arr[] = {5, 2, 9, 1, 5, 6};
-    int n = sizeof(arr) / sizeof(arr[0]);
-
-    cout << "排序前数组: ";
-    for (int i = 0; i < n; ++i) {
-        cout << arr[i] << " ";
-    }
-    cout << endl;
-
-    bubbleSort(arr, n);
-
-    cout << "排序后数组: ";
-    for (int i = 0; i < n; ++i) {
-        cout << arr[i] << " ";
-    }
-    cout << endl;
-
-    return 0;
+    System system;  ///< 创建系统对象
+    system.run();   ///< 启动系统主循环
+    return 0;       ///< 正常退出
 }

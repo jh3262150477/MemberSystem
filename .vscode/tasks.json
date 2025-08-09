@@ -7,7 +7,7 @@
 		{
             // 任务一： 创建 build 文件夹
             "type": "shell",
-            "label": "CreateBuildDir", // lable 标记任务名称
+            "label": "CreateBuildDir", // label 标记任务名称
             "command": "mkdir",  // 命令
             "args": [
                     "-Force",
@@ -18,7 +18,7 @@
             },
             "problemMatcher": [
                 "$gcc"
-            ],
+            ]
         },
 		{
 			// 任务二： 执行cmake指令根据CMakeLists.txt在build目录下生成Makefile
@@ -37,7 +37,14 @@
 			],
 			"dependsOn":[
                 "CreateBuildDir"
-            ]
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/build"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
 		},
 		{
 			// 任务三： 执行mingw32-make.exe根据Makefile编译可执行文件
@@ -51,6 +58,12 @@
 			],
 			"dependsOn":[
                 "cmake"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/build"
+            },
+            "problemMatcher": [
+                "$gcc"
             ]
 		},
 		{
@@ -62,6 +75,6 @@
 		}
 	],
 	"presentation": {
-		"panel": "shared",
+		"panel": "shared"
 	}
 }
