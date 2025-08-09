@@ -1,0 +1,68 @@
+# =============================================================================
+# 会员管理系统 Git 忽略文件
+# Member Management System Git Ignore File
+# =============================================================================
+
+# 构建目录
+build/
+bin/
+lib/
+
+# 可执行文件
+*.exe
+*.out
+*.app
+
+# 目标文件
+*.o
+*.obj
+*.so
+*.dll
+*.dylib
+
+# 静态库
+*.a
+*.lib
+
+# CMake 生成的文件
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+
+# 编译数据库
+compile_commands.json
+
+# IDE 文件
+.vscode/settings.json
+.vscode/launch.json
+.vscode/tasks.json
+.idea/
+*.swp
+*.swo
+*~
+
+# 操作系统生成的文件
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 临时文件
+*.tmp
+*.temp
+*.log
+
+# 数据文件（可选，根据需求调整）
+# *.dat
+# *.csv
+# *.json
+
+# 备份文件
+*.bak
+*.backup
+
+# 调试文件
+*.pdb
+*.ilk
+*.exp
